@@ -3,12 +3,10 @@ export type {
   Category,
   CTA,
   FreeTextMatch,
-  Message,
   Profile,
   ProgramKey,
   Programme,
   Question,
-  Session,
 } from "./types";
 
 export {
@@ -19,14 +17,10 @@ export {
   getCategories,
   getCategory,
   getCounsellorCta,
-  getProgramme,
   getProgrammes,
   getQuestion,
   getQuestionsForCategory,
   getRelatedQuestions,
   isHttpUrl,
-  isShippable,
   matchFreeText,
-  matchesProgrammeContext,
-  welcomeMessage,
 } from "./service";

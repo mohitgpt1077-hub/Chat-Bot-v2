@@ -43,10 +43,6 @@ export function emptyProfile(): Profile {
   };
 }
 
-export function welcomeMessage(firstName: string): string {
-  return `Hi ${firstName}! How can I help you today?`;
-}
-
 export function isHttpUrl(value: string | null | undefined): value is string {
   return Boolean(value && /^https?:\/\//i.test(value));
 }
@@ -79,10 +75,6 @@ export function getProgrammes(courseType: "UG" | "PG"): Programme[] {
   return catalog.programmes.filter(
     (p) => p.active && !p.placeholder && (p.courseType === "BOTH" || p.courseType === courseType),
   );
-}
-
-export function getProgramme(id: string): Programme | null {
-  return catalog.programmes.find((p) => p.id === id) ?? null;
 }
 
 export function getCategory(id: string): Category | null {
